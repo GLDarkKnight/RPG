@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*LightingcycleManger.cs
+ * 10-24-2020
+ * Light cycle manger - Not implacted yet - the control for Day and Night cycles!
+ * RPG.DayNight - Not yet added
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Presets;
 using UnityEngine;
@@ -45,13 +50,13 @@ public class LightingcycleManger : MonoBehaviour
         }
         
     }
-
+    //Not Working!
     private void TimeZone()
     {
         currentTimeofDay += (Time.deltaTime / secondsinFullDay) * timeMulitiplier;
         if (currentTimeofDay >= 1) currentTimeofDay = 0;
     }
-
+    //Notworking! will be fixed!
     private void UpdateLighting(float timePercent)
     {
         //RenderSettings.ambientLight = lPreset.AmbientColor.Evaluate(lightcomp);
@@ -64,6 +69,7 @@ public class LightingcycleManger : MonoBehaviour
             directionalLight.transform.localRotation = Quaternion.Euler(new Vector3((currentTimeofDay * 360f) - 90f, 170f, 0));
         }
     }
+    //On Validate will check each time its loaded up - this will make sure theres a light is set.
     private void OnValidate()
     {
         if (directionalLight != null)

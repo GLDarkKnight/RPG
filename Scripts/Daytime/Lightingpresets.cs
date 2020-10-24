@@ -1,9 +1,9 @@
 ﻿/*Dustin Huff Lighting Presets
+ * 10-24-2020
  * AmbientColor designed for Sun Color 
  * DirectionalColor designed for the Directional color of the light (Sun Light)
  * FogColor designed for Ambient Fog
- *       
- *  Copyright 2020 Dustin Huff AKA Grupy Grampa Paints Studios (Name Pending)
+ * RPG.DayNight - Not yet added
  */
 
 using System.Collections;

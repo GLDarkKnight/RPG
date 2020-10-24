@@ -12,7 +12,7 @@ namespace RPG.Core
 {
     public class Health : MonoBehaviour
     {
-        [Header("Settings")]
+        //Define Vars
         [SerializeField] float health = 100f;
         private bool isDead = false;
         //Return if target is dead

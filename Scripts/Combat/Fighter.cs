@@ -1,4 +1,5 @@
 ﻿/*Fighter.cs
+ * 10-24-2020
  * Dependent on Movement, and Core
  * RPG.Combat
  */
@@ -12,7 +13,6 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        [Header("Settings")]
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;
@@ -51,7 +51,7 @@ namespace RPG.Combat
                 timeSinceLastAttack = 0;
             }
         }
-
+        //Triggers the Attack in the animaion loop.
         private void AttackTrigger()
         {
             GetComponent<Animator>().ResetTrigger("stopAttack");
@@ -73,6 +73,7 @@ namespace RPG.Combat
         {
             return ishostile;
         }
+        //Can Attack - Well can I?
         public bool CanAttack(GameObject combat)
         {
             if (combat == null) return false;
